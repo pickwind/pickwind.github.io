@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>扫盲常见的逻辑谬误——从概念到实例 | 拾风记博客</title><meta name="keywords" content="思维"><meta name="author" content="拾风记"><meta name="copyright" content="拾风记"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文章目录 一、逻辑谬误概述 二、常见的谬误形式 三、如何避免逻辑谬误 四、结语  一、逻辑谬误概述1、什么是逻辑谬误关于逻辑谬误严格的定义，这里引用【维基百科】来解释：  谬误与谬论是不恰当的推理，一般而言谬误指不当的推理思路，而谬论指不当的推理言论，可能是说者有不当思路，或说者无不当思路，但意图使听者产生不当思路或其言论明显容易误导听者产生不当思路。也有较宽松的使用方式，例如把所有与事实不符的主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="扫盲常见的逻辑谬误——从概念到实例">
+<meta property="og:url" content="http://pickwind.github.io/2022/06/1943560780/index.html">
+<meta property="og:site_name" content="拾风记博客">
+<meta property="og:description" content="文章目录 一、逻辑谬误概述 二、常见的谬误形式 三、如何避免逻辑谬误 四、结语  一、逻辑谬误概述1、什么是逻辑谬误关于逻辑谬误严格的定义，这里引用【维基百科】来解释：  谬误与谬论是不恰当的推理，一般而言谬误指不当的推理思路，而谬论指不当的推理言论，可能是说者有不当思路，或说者无不当思路，但意图使听者产生不当思路或其言论明显容易误导听者产生不当思路。也有较宽松的使用方式，例如把所有与事实不符的主">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI">
+<meta property="article:published_time" content="2022-06-05T07:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-05T07:00:00.000Z">
+<meta property="article:author" content="拾风记">
+<meta property="article:tag" content="思维">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI"><link rel="shortcut icon" href="https://lh3.googleusercontent.com/u/0/d/14tu5S_9N5zpuMCQSGwEVcpTsZYN6viKT"><link rel="canonical" href="http://pickwind.github.io/2022/06/1943560780/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '扫盲常见的逻辑谬误——从概念到实例',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-05 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://lh3.googleusercontent.com/u/0/d/14tu5S_9N5zpuMCQSGwEVcpTsZYN6viKT" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/software/"><i class="fa-fw fas fa-desktop"></i><span> 软件</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 网站推荐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">拾风记博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/software/"><i class="fa-fw fas fa-desktop"></i><span> 软件</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 网站推荐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">扫盲常见的逻辑谬误——从概念到实例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-05T07:00:00.000Z" title="发表于 2022-06-05 00:00:00">2022-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-05T07:00:00.000Z" title="更新于 2022-06-05 00:00:00">2022-06-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>文章目录</strong></p>
+<p><a href="#h1">一、逻辑谬误概述</a></p>
+<p><a href="#h2">二、常见的谬误形式</a></p>
+<p><a href="#h3">三、如何避免逻辑谬误</a></p>
+<p><a href="#h4">四、结语</a></p>
+<hr>
+<h2 id="一、逻辑谬误概述"><a href="#一、逻辑谬误概述" class="headerlink" title="一、逻辑谬误概述"></a><a id='h1'>一、逻辑谬误概述</a></h2><h3 id="1、什么是逻辑谬误"><a href="#1、什么是逻辑谬误" class="headerlink" title="1、什么是逻辑谬误"></a>1、什么是逻辑谬误</h3><p>关于逻辑谬误严格的定义，这里引用<a target="_blank" rel="noopener" href="https://zh.m.wikipedia.org/zh-cn/%E8%AC%AC%E8%AA%A4%E5%88%97%E8%A1%A8">【维基百科】</a>来解释：</p>
+<blockquote>
+<p>谬误与谬论是不恰当的推理，一般而言谬误指不当的推理思路，而谬论指不当的推理言论，可能是说者有不当思路，或说者无不当思路，但意图使听者产生不当思路或其言论明显容易误导听者产生不当思路。也有较宽松的使用方式，例如把所有与事实不符的主张皆称作谬误。</p>
+</blockquote>
+<p>需要强调的是，【谬误】和【谎言】的关系：</p>
+<blockquote>
+<p>尽管谬误经常和谎言有关，但论证有谬误，不代表论者在说谎，论者可能真心相信自己的推理正确，但因各种原因而犯下错误，而单单看到他人论证出现谬误就指称对方在撒谎的做法，也可能构成关联谬误和人身攻击。</p>
+</blockquote>
+<h3 id="2、我们为什么欠缺逻辑思维"><a href="#2、我们为什么欠缺逻辑思维" class="headerlink" title="2、我们为什么欠缺逻辑思维"></a>2、我们为什么欠缺逻辑思维</h3><p>解释这个问题，得从【教育】、【文化】、【政治】这三个角度来讲。</p>
+<ul>
+<li><p>其一，国内所实行的是【灌输式教育】，重视成绩，而不重视逻辑训练；</p>
+</li>
+<li><p>其二，中国传统经典作品重视思想，而不重视理论。常常以似是而非的概念示人，缺少严谨的逻辑论证。【逻辑】一词也是中国近代的【舶来品】，我们接受的也是中西方混合式的教育。但在中国只重点普及了西方的“实用性”学科，并没有普及“哲学”“逻辑”等学科。</p>
+</li>
+<li><p>其三，从政治角度来说，官方不需要普通民众人人都懂逻辑。因为“懂逻辑”就有可能懂【批判性思维】，这对【愚民政策】而言，是”后患无穷“的。</p>
+</li>
+</ul>
+<p>下面引用一些文章或现象来说明：</p>
+<p>先分享一篇国内的访谈文章：<a target="_blank" rel="noopener" href="https://www.aisixiang.com/data/52960.html">《赵汀阳：是什么让中国人“不讲逻辑”》</a></p>
+<blockquote>
+<p>不讲逻辑好像是现在中国人的一种“集体无意识”。公共领域的争论，多自立场开始，以人身攻击结束。而某些政府部门“你和他讲道理，他和你耍流氓；你和他耍流氓，他和你讲法制；你和他讲法制，他和你讲政治……”的背后，其实也是耍赖，不讲逻辑。</p>
+<p>还有另一种不讲逻辑的方式。大家习惯了玩类比、玩隐喻、玩象征、玩暗示来“讲道理”。我们从小就被训练玩各种文学的修辞手法。</p>
+</blockquote>
+<p>上述的社会现象很普遍，也部分解答了文章的题目。但如果仔细阅读全文，就会发现”赵汀阳“本人虽然身为“哲学家”，但自始至终”也都【没有】正面回答这篇文章的题目”是什么让中国人不讲逻辑“这个问题。他既没有否定传统文化，同时也没有肯定传统文化作品讲逻辑。他只是反复论证传统文化并非不讲逻辑，而是有着自身存在的意义，却对真正的问题避而不谈，因此赵汀阳在这里犯了【琐碎真理】的谬误。</p>
+<p>还有一篇20年前有趣的文章：<a target="_blank" rel="noopener" href="https://view.news.qq.com/a/20120612/000055.htm">《辩证法与放屁》</a></p>
+<blockquote>
+<p><strong>第一堂课</strong></p>
+<p>上课时，我放了一个屁 — — 很普通的屁。既不很臭，当然也绝对不香。<br>可怕的是，教授正在讲辩证法。<br>“请你自己对这个屁作一下判断，”教授说，“它好还是不好？”<br>我只得说：“不好。”<br>“错了，”教授说，“任何事物都有矛盾组成，有它不好的一面，肯定有它好的一面。”<br>“那么说它好也不对了？”我问。<br>“当然。”教授说。<br>“它既好又不好。”<br>“错了。你只看到矛盾双方对立斗争的一面，没有看到他们统一的一面。”<br>我只好认真看待这个严肃的问题，仔细想了想说：“这个屁既好又不好，但不好的一面是主要的，处于主导地位。”<br>“错了。你是用静止的观点看问题。矛盾的双方会相互转换，今天处于主导地位一面，明天一定处于次要地位。”</p>
+</blockquote>
+<p>这里只分享了第一段，如果你没看过，那么建议阅读全文。这篇文章也讽刺了许多人不爱讲逻辑，但是爱讲”道理”。</p>
+<p>第一部分解释了【WHAT】和【WHY】，关于【HOW】则留在第三部分讲。</p>
+<h2 id="二、常见的谬误形式"><a href="#二、常见的谬误形式" class="headerlink" title="二、常见的谬误形式"></a><a id='h2'>二、常见的谬误形式</a></h2><p>作者注：</p>
+<p>①逻辑谬误的形式可按照“逻辑结构是否有缺陷”分为【形式谬误】和【非形式谬误】两大类，每个大类可根据“谬误类型”分为若干中类，每个种类又可根据“具体条件”细分为若干小类。比如：谬误形式≥非形式谬误≥歧义谬误≥偷换概念。</p>
+<p>②由于谬误形式的数量众多，网上的资料参差不齐，因此我选择了具有【权威性】的【维基百科】，挑选了一些常见的【非形式谬误】，用举例的形式进行讲解。想要了解更多，请参阅<a target="_blank" rel="noopener" href="https://zh.m.wikipedia.org/zh-cn/%E8%AC%AC%E8%AA%A4%E5%88%97%E8%A1%A8">维基百科</a>或翻看《逻辑学导论》一类的专业书籍。</p>
+<p><img src="https://lh3.googleusercontent.com/u/0/d/1ze4WiUysADpfApJVAAzgol8nZoJdE40W"></p>
+<h3 id="1、歧义谬误"><a href="#1、歧义谬误" class="headerlink" title="1、歧义谬误"></a>1、歧义谬误</h3><p><strong>✧断章取义</strong>：引用某人的说词作为论证理据，却不当删除了上下文，扭曲了原来的意思。</p>
+<p><strong>✧偷换概念</strong>：蓄意把谈论中的某些关键词换成其他概念，然后再攻击更换后的概念。注意和【稻草人谬误】的关系。</p>
+<blockquote>
+<p>稻草人论证有时会和“偷换主题”、“偷换概念”混称，但严格而言未必相等：后二者是蓄意扭曲原论点，而稻草人论证可能是攻击者有心扭曲对方论点以达贬低效果，也可能是攻击者无心地误解了对方论点，或对方论述不清致使攻击者误会。</p>
+</blockquote>
+<p>举例：</p>
+<blockquote>
+<p>张三：我认为美国的平均生活水平要高于中国。</p>
+<p>李四：呸，美帝的走狗！看不起中国人是吧？</p>
+<p>分析：李四把”高于中国“这个概念等价成了”看不起中国人“</p>
+<p>张三：我呼吁大家一起向政府抗议封城政策，不要因为疫情而限制人身自由</p>
+<p>李四：你是不是希望国家大乱？</p>
+<p>分析：李四把”抗议封城“等价成了”希望国家大乱“</p>
+</blockquote>
+<h3 id="2、废话谬误"><a href="#2、废话谬误" class="headerlink" title="2、废话谬误"></a>2、废话谬误</h3><p><strong>✧琐碎真理</strong>：详见本文第一部分对【赵汀阳】的分析</p>
+<p><strong>✧回顾性宿命论</strong>：在某事发生后，主张某事是注定会发生。例如宣称“从既有的证据来看，二战是注定发生的，就算希特勒当时死了，德国也迟早会侵略波兰的”</p>
+<h3 id="3、歪曲论题谬误"><a href="#3、歪曲论题谬误" class="headerlink" title="3、歪曲论题谬误"></a>3、歪曲论题谬误</h3><p><strong>✧稻草人谬误</strong>：曲解对方的论点，针对曲解后的论点（替身稻草人）攻击，再宣称已推翻对方论点的论证方式。即把对方的论点换成一个”稻草假人“，通过攻击”稻草假人“来证明对方原论点是错误的。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：我支持大麻合法化</p>
+<p>李四：看来你没少抽大麻</p>
+<p>分析：李四把”支持大麻合法化“替换成”抽大麻“这个稻草人</p>
+<p>张三：我认为美国应该开放一些技术专利给别的国家</p>
+<p>李四：你这么居心叵测，是不是想让中国形成技术依赖，发展不了自己的科技？</p>
+<p>分析：李四把”美国放开专利“替换成”让中国形成技术依赖“这个稻草人</p>
+<p>以上两个案例都是故意歪曲论题，也属于【偷换概念】</p>
+</blockquote>
+<p><strong>✧红鲱鱼&#x2F;转移话题谬误</strong>：指以修辞或文学等各种手法转移议题焦点与注意力，是一种政治宣传、公关及戏剧创作的技巧，也是一种逻辑谬误。一些常见的逻辑谬误，像是各类的诉诸情感，都可视为红鲱鱼的一种。比如中学课本里的”王顾左右而言他“就是典型的转移话题。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：为了安全考虑，我认为酒后不应该开车</p>
+<p>李四：那么多没喝酒的司机，也照样也发生了车祸</p>
+<p>分析：李四没有去讨论酒后应不应该开车，而是去讨论另一个看似相关的话题，这也是典型的【杠精】话术</p>
+</blockquote>
+<p><strong>✧烟雾弹</strong>：引入细节把议题弄得复杂，令他人无法注意该注意的重点。下面引用“维基百科”的内容，来区分它和【红鲱鱼】的关系。</p>
+<blockquote>
+<p>有人认为美国总统比尔·克林顿对苏丹采取导弹行动，是用来把民众视线引离他与莫妮卡·陆文斯基外遇事件的红鲱鱼。这是引入无关议题以转移注意力，故为【红鲱鱼】。</p>
+<p>亦有人认为，小布什（George W. Bush）攻击伊拉克其实是为了石油利益、为了完成老布希未完成的政绩；他高谈阔论伊拉克有导弹、有核武器、对美国如何造成威胁等等，都不是重点。这是引入相关议题令主题复杂，令人忽略其真正目的，故为【烟雾弹】。</p>
+</blockquote>
+<h3 id="4、起源谬误"><a href="#4、起源谬误" class="headerlink" title="4、起源谬误"></a>4、起源谬误</h3><blockquote>
+<p>攻击论证的来源，比如提出论证的人或其出身背景、或论证前提的资讯来源等等，但这些攻击无法连结到论证本身的有效性。</p>
+</blockquote>
+<p><strong>✧诉诸权威</strong>：称伪托权威、援假权威，是一种特殊类型的归纳论证谬误。虽然有时某些类别的诉诸权威能够成为有力的归纳论证，但是这种论证通常都存在被【误用】的情况。</p>
+<p>需要强调的是，当诉诸的权威不在相关领域时，那么该权威是【不可靠的】，就犯了诉诸权威谬误；而即使诉诸的权威在自身主张的领域内，也需要进行严格的论证来判断可不可靠。因此，对于【诉诸权威】需要谨慎对待，对错都要进行论证。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：为什么你认为”暗物质“是存在的？</p>
+<p>李四：因为刘慈欣都这样说了（这里只是假设）</p>
+<p>分析：刘慈欣是科幻小说家，因而在【天体物理】领域并没有权威性。因此李四就犯了【诉诸权威】的谬误</p>
+</blockquote>
+<h3 id="5、诉诸人身"><a href="#5、诉诸人身" class="headerlink" title="5、诉诸人身"></a>5、诉诸人身</h3><blockquote>
+<p>不讨论问题本身，而去宣称某人有某些个人特质，以明示或暗示其主张<strong>可取或不可取</strong>。这些个人特质可以是人格、动机、态度、地位、阶级或处境等等。简单来说，就是<strong>“对人不对事”</strong></p>
+</blockquote>
+<p><strong>✧扣帽子&#x2F;贴标签</strong>：把某些负面特质强加至他人身上，以明示或暗示其主张不可取。</p>
+<p><strong>✧人身攻击</strong>：指在沟通对话时，攻击、批评对方个人因素相关之断言或质疑；如人格、动机、态度、地位、阶级或处境等。与此相对的是【诉诸好人】。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：我认为美国的平均生活水平要高于中国</p>
+<p>李四：你不过是个穷人，有本事移民到美国再说这话</p>
+<p>分析：李四通过质疑张三的地位&#x2F;动机来反驳张三</p>
+</blockquote>
+<p><strong>✧诉诸动机</strong>：或称诛心论，由质疑主张者的动机，而论证或明示暗示其主张不合理。主张者背后特定的动机或利害关系只是提出论述的一种可能，未必就是提出论证的真正原因。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：我认为发展新能源汽车有助于解决环境问题</p>
+<p>李四：你是新能源公司的人，发展新能源汽车对你当然有好处</p>
+<p>分析：李四没有去讨论发展新能源汽车是否真的有助于解决环境问题，而是直接质疑张三的动机</p>
+</blockquote>
+<p><strong>✧诉诸伪善</strong>：或“你也一样”，主张某人的行为和他的主张有不一致的地方，但却指不出该主张哪里有错。指责别人五十步笑百步以及“那又怎么说”主义都是诉诸伪善的一种表现。</p>
+<p>举例：</p>
+<blockquote>
+<p>张三：我认为抄袭严重侵犯了别人的版权，版权制度还需要完善</p>
+<p>李四：你自己不也曾抄袭过吗，有什么资格谈论版权制度</p>
+<p>分析：李四的言行不一致，这减弱了他的说服力与权威性，但这不能成为阻止他谈论版权制度的决定因素。</p>
+</blockquote>
+<p>其他诸如：诉诸好人&#x2F;成就&#x2F;富贵&#x2F;贫贱&#x2F;传统等，都是<strong>对人不对事</strong>，这里就不一一列举了。</p>
+<h3 id="6、诉诸情感"><a href="#6、诉诸情感" class="headerlink" title="6、诉诸情感"></a>6、诉诸情感</h3><blockquote>
+<p>是指借由操纵人们的情感，而非有效的逻辑，以求赢得争论的论证方式。这种谬误在缺乏事实证据支持的状况下更为显著。</p>
+</blockquote>
+<p><strong>✧诉诸恐惧</strong>：意图以引发恐惧的方式使人误认，选择某些抵抗恐惧的措施、或接受某些信念是唯一的选择，但事实并不一定如此。</p>
+<p>举例：</p>
+<blockquote>
+<p>如《1984》书中所言“老大哥在盯着你”</p>
+<p>如果抹黑国家，无论你人在哪，迟早都要被清算！</p>
+<p>美国枪支泛滥，移民去美国就是生活在枪口之下！（这个例子同时也犯了【偷换概念】的谬误）</p>
+</blockquote>
+<p><strong>✧诉诸言论自由</strong>：说法被质疑时，主张自己有权发表意见或有言论自由。像例如在全球暖化否定说被专家推翻时，反对全球暖化现象存在的人声称“学术界打压我们的言论自由！”</p>
+<p>其他诸如：诉诸厌恶&#x2F;仇恨&#x2F;谄媚&#x2F;怜悯&#x2F;后果等，都是通过操纵当事人的或感激或同情或厌恶等的情感，来达到自己论证的目的。</p>
+<h3 id="7、以偏概全"><a href="#7、以偏概全" class="headerlink" title="7、以偏概全"></a>7、以偏概全</h3><p><strong>✧诉诸可能</strong>：把合理当正确，是基于一件事有可能或相当可能是真的，就把它当作确定是真的。</p>
+<p><strong>✧布佛氏论证</strong>：是一种“诉诸为何相信”的非形式谬误，其假定某观点是错的，由此出发解释为什么许多人会相信它，然后断定该观点是错误的。布佛氏论证预设了一个不当的前提：如果某个信念可以由不理性的因素解释，则我们不必理会这个信念。</p>
+<p>这个谬误在网上比较常见，在此直接引用“维基百科”的案例解释：</p>
+<blockquote>
+<p>①XXX在网络上声称自己是女生，可是XXX从来没露脸，还总是找各种理由推辞，想办法不在网友面前露面；②而且在网络上，明明是男生却声称自己是女生的人很多，③所以XXX一定是男的。<br>分析：从【布佛氏论证】定义出发，①先假定XXX不是女生，②再由此出发解释为什么人会相信XXX是女生，③最后得出XXX是男生的结论。</p>
+<p>从XXX的言行来看，人们可以合理地怀疑XXX很可能是男生，但这不表示XXX一定是男生或女生。</p>
+</blockquote>
+<h3 id="8、因果谬误"><a href="#8、因果谬误" class="headerlink" title="8、因果谬误"></a>8、因果谬误</h3><blockquote>
+<p>泛指各种未有充分证据便轻率断定因果关系的不当推论。</p>
+</blockquote>
+<p><strong>✧回归谬误</strong>：非常态的甲事发生以后，用乙措施处理后甲事扭转，便断定乙措施可扭转甲事。然而非常态的事发生后，本来就比较容易发生较接近常态的事。</p>
+<p>举例：</p>
+<blockquote>
+<p>小明上次打棒球的成绩奇差无比，教练把他骂一顿以后，这次比赛的成绩就进步了。因此，责骂可以提升小明打棒球的成绩。</p>
+<p>分析：比赛中的表现往往会时好时坏，但最终都会【回归】到小明的平均水平，不能就断定是【责骂】起了作用。</p>
+</blockquote>
+<p>鉴于【维基百科】的解释比较模糊，且这个谬误生活中很常见却很少有人注意到，因此这里再多费些口水：</p>
+<blockquote>
+<p>【回归谬误】可以理解成“对回归平均值现象的错误归因”。</p>
+<p>而【回归平均值】则是：对于有【随机波动】事物的发展与变化，最终要回归平均水平。</p>
+<p>比如你的考试成绩可能忽上忽下，但最终会回归到你的【平均水平】，而和老师是否责骂你没多大关系。</p>
+</blockquote>
+<p><strong>✧滑坡谬误</strong>：</p>
+<blockquote>
+<p>使用连串的因果推论，却夸大了每个环节的因果强度，而得到不合理的结论，因为事实不一定照着线性推论发生，而有其他的可能性。</p>
+</blockquote>
+<p>举例：</p>
+<blockquote>
+<p>中国家长鸡娃时常常会陷入这种谬误：如果孩子不努力学习，就考不上好中学，然后就考不上好大学，将来就不会找到好工作，再以后就会一辈子碌碌无为。</p>
+<p>分析：首先未来是不可预测的，不可能从现在的“因”顺利推到若干年后的“果”。其次有些关系链中的些“因果”有强有弱，【因果关系】并非必然能滑倒最后一个【坡】。当然如果关系链的每个环节都有【强】因果关系，那么就不构成【滑坡谬误】了。</p>
+</blockquote>
+<h3 id="9、不当预设谬误"><a href="#9、不当预设谬误" class="headerlink" title="9、不当预设谬误"></a>9、不当预设谬误</h3><blockquote>
+<p>泛指各种把语境中不应视为理所当然的前提视为理所当然，而产生的不恰当推理或言行。</p>
+</blockquote>
+<p><strong>✧乞题类比</strong>：即把不应视为理所当然的类比作为前提</p>
+<p>举例：</p>
+<blockquote>
+<p>人类的意识就像软件，所以透过意识上传达成永生是可能的。</p>
+<p>分析：此处理所当然地预设人类意识和软件一样</p>
+</blockquote>
+<p><strong>✧循环论证</strong>：论点的正确性最终由自身支持</p>
+<p>举例：</p>
+<blockquote>
+<p>圣经写的都是对的。<br>怎么知道圣经写的都是对的？<br>因为圣经是上帝写的，而且上帝不会说谎也不会犯错。<br>怎么知道圣经是上帝写的，而且上帝不会说谎也不会犯错的？<br>因为圣经这么写</p>
+</blockquote>
+<p><strong>✧既定观点问题</strong>：在问题中掺入预设的观点，对方一旦回答，就等同承认这些观点是真的。也是【诱导性提问】的一种。</p>
+<p>举例：</p>
+<blockquote>
+<p>20年前香港记者采访【长者】时提问到：为什么提前钦定董建华为特首</p>
+<p>分析：这个问题就预设了“董建华是钦定的”这个前提</p>
+</blockquote>
+<p><strong>✧诱导性提问</strong>：或称暗示性问题，是指用不恰当的提问方式限缩、操控回答者的回答。诱导性提问往往会使答案不能确实反映回答者内心的真实想法。</p>
+<p>举例：</p>
+<blockquote>
+<p>常见于电视台直播访谈，因为要诱导被采访人给出积极的回答</p>
+<p>比如：作为经济学家，您认为国家现有的经济改革方案是如何刺激经济发展的呢？</p>
+</blockquote>
+<hr>
+<p>此外，还有【维基百科-谬误】中没有收录的一个词条：【幸存者偏差】。基于它的【重要性】，我以后会单独写一篇博文专门介绍，这里先仅做概括。</p>
+<p><strong>✧幸存者偏差</strong>：指只能看到经过某种筛选而产生的结果，而没有意识到筛选的过程，因此忽略了被筛选掉的关键信息。</p>
+<p>举例：</p>
+<blockquote>
+<p>在国内的网站上，几乎看不到对政府或者国策的批评声音，而是一片欣欣向荣的景象。如果一个机构单从社交媒体来调查【政府满意度】，那么很可能得出“中国人对政府的满意度是世界上最高的”的结论。这个机构就陷入了【幸存者偏见】的谬误。</p>
+<p>分析：基于【网络审查】，即使网上出现了“批评的声音”，那么也快就会被“网络审查员”删除，所以统计样本并没有把【已经被删除】的言论统计进去。</p>
+</blockquote>
+<h2 id="三、如何避免犯逻辑谬误"><a href="#三、如何避免犯逻辑谬误" class="headerlink" title="三、如何避免犯逻辑谬误"></a><a id='h3'>三、如何避免犯逻辑谬误</a></h2><h3 id="1、结束无意义的口水战"><a href="#1、结束无意义的口水战" class="headerlink" title="1、结束无意义的口水战"></a>1、结束无意义的口水战</h3><p>在口水战中，为什么【逻辑论述】不敌【抖包袱&#x2F;抖机灵】？</p>
+<p>在口水战中，争论的目的往往不是为了让真相浮出水面，而只是为了证明自己的【立场正确】。为了逞一时之快，甘愿去【抖包袱&#x2F;抖机灵】，而不原进行【逻辑论述】，因为后者在【短时间、快节奏、浅薄化】的口水战场合中很难发挥优势。如果遇到【杠精】，即使你说的天花乱坠、无懈可击，但对方就是【王八吃秤砣——铁了心】，那任谁也没有办法。</p>
+<p>口水战中争论问题的焦点或者方向往往也很【模糊】，比如信奉【基督教】和信奉【伊斯兰教】的人讨论哪一个“神”更伟大，这里就更不能用【逻辑论述】去争论了，而且这种没方向争论也是毫无意义可言的。</p>
+<p>因此在口水战中，不仅训练不了自己的逻辑思维能力，反而更容易让自己陷入逻辑谬误。避免口水战，是防止自己陷入【逻辑谬误】第一步。</p>
+<h3 id="2、建立批判性思维"><a href="#2、建立批判性思维" class="headerlink" title="2、建立批判性思维"></a>2、建立批判性思维</h3><blockquote>
+<p>批判性思维，或称批判性思考、思辨能力、严谨的思考、明辨性思维、审辨式思维等，是对事实、证据、观察结果和论据的分析以形成判断。也是积极和熟练地概念化、应用、分析、综合和&#x2F;或评估从观察、经验、反思、推理或交流中收集或产生的信息的智力训练过程，作为信念和行动的指南。</p>
+</blockquote>
+<p>简单来说，批判性思维就是通过【质疑】来获得对人或事物的【认知】。下面讲两点训练【批判性思维】的方式。</p>
+<p><strong>✧保持对问题的合理怀疑</strong></p>
+<p>首先要区分【观点】与【事实】，【观点】是主观的，【事实】是客观的</p>
+<table>
+<thead>
+<tr>
+<th align="center">情况分类</th>
+<th align="center">真假</th>
+<th align="center">对错</th>
+<th align="center">举例</th>
+<th align="center">是否需要质疑</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">①对于“主观体验或兴趣”的【观点】</td>
+<td align="center">【无】真假</td>
+<td align="center">【无】对错</td>
+<td align="center">我喜欢莫扎特的曲子</td>
+<td align="center">【不需】质疑</td>
+</tr>
+<tr>
+<td align="center">②【事实】</td>
+<td align="center">【有】真假</td>
+<td align="center">【无】对错</td>
+<td align="center">秦始皇诞生于BC259年</td>
+<td align="center">【需要】质疑，但验证真假有难度之分</td>
+</tr>
+<tr>
+<td align="center">③<strong>注意</strong>：对于推理得出的【观点】</td>
+<td align="center">【无】真假</td>
+<td align="center">【有】对错</td>
+<td align="center">经过“网络调查”，我认为国人幸福指数为99%</td>
+<td align="center">【需要】质疑，推理是否有逻辑错误</td>
+</tr>
+</tbody></table>
+<p>引申（由上述结论再看问题是否值得去争论）：</p>
+<blockquote>
+<p>对于情况①，争论没有意义，而这正是【口水战】的重灾区</p>
+<p>对于情况②，容易验证真假的【事实】，争论意义不大；<strong>难以验证真假的【事实】，需要看【问题】本身有没有争论的【价值】；</strong>不可能验证真假的【事实】，即使争论也不可能有结果</p>
+<p>对于情况③，<strong>同样需要看【问题】本身有没有争论的【价值】</strong></p>
+</blockquote>
+<p><strong>✧保持对自身的合理怀疑</strong></p>
+<p>中国有句古话叫“吾日三省吾身”，讲的是【内省】，这句话可以引申到对“自身的合理怀疑”。</p>
+<p>人是【环境的产物】，这里的所说的【环境】包括了人从小到大所经历的“衣食住行“、”听说读写”等。【长期环境】塑造了人的性格、品行、思维等，比如人不可能凭空出现【认知能力】，也很难在一个封建落后的环境下写出《自然哲学的数学原理》。环境也决定了人的【思维方式】和【思维上限】。</p>
+<p>认识到这一点也就不难理解人天生就有着【长期生活环境】所带来的【偏见】，这里的【偏见】并不是指对问题或事物的错误看法，而是指【看待事物的方式】可能有失偏颇。</p>
+<p>因此在【内省】时，建议使用【WHAT WHY HOW】模型。①【WHAT】分析或推理事情的前因后果，②【WHY】分析有没有可能是【过往的经历】使自己产生了偏见，或有没有可能是【当时的环境】影响了自己的判断，③【HOW】最后反思自己该怎么做</p>
+<p>引申举例：张三的自我剖析</p>
+<blockquote>
+<p>在一个LGBT节日，张三本来并没有兴趣甚至拒绝去关注他们的游行。但在看到官方打压他们的新闻后，自己又为他们打抱不平，并且在之后又主动关心起了他们的处境以及动态。</p>
+<p>分析：①【WHAT】张三心理变化的过程，由“拒绝关注”到“主动去关注”；</p>
+<p>②【WHY】可能是由于社会一直以来对该团体冷漠甚至刻意回避，以及在传统文化的束缚下自己并不想跟他们产生联系，从而导致自己拒绝去关注他们（过往经历产生的偏见）。但是在看到官方打压他们之后，自己内心又产生怜悯之心（当时的环境又推翻了之前的偏见）</p>
+<p>③【HOW】之后主动关心起了他们的处境以及动态</p>
+</blockquote>
+<h2 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a><a id='h4'>四、结语</a></h2><p>本文从【逻辑谬误的成因】讲起，中间使用大量笔墨并举例解释各种常见的谬误形式，并以【如何建立批判性思维】结尾，旨在希望读者能够搭建自己的【思考体系】。本文的重点是第三部分的【批判性思维】，因为【谬误形式】万变不离其宗，了解并熟练使用只能够帮助你在遇到问题时做出自己的判断。而【批判性思维】则是连接【知识】与【思维能力】的纽带，同时也是各种【思维能力】的”工具基础“。虽然这不是万能药，但培养【批判性思维】足以预防洗脑并使自己更加理性地【认识自我】与【认知世界】。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://pickwind.github.io">拾风记</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://pickwind.github.io/2022/06/1943560780/">http://pickwind.github.io/2022/06/1943560780/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本站所有的原创文章，作者皆保留版权，转载时需注明作者及原文链接！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%9D%E7%BB%B4/">思维</a></div><div class="post_share"><div class="social-share" data-image="https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/464644793/"><img class="prev-cover" src="https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">为什么“粉红经济”终将被反噬——从社会主义铁拳到爱国主义</div></div></a></div><div class="next-post pull-right"><a href="/2022/06/2545162250/"><img class="next-cover" src="https://lh3.googleusercontent.com/u/0/d/1r8ezqq45fZ41Bm4JmME-wDNZtLBouc1f" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">分享各类音乐</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://lh3.googleusercontent.com/u/0/d/14tu5S_9N5zpuMCQSGwEVcpTsZYN6viKT" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">拾风记</div><div class="author-info__description">思考|记录 |分享</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">关于博客使用说明，请点击网站右上角【关于】界面。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%80%BB%E8%BE%91%E8%B0%AC%E8%AF%AF%E6%A6%82%E8%BF%B0"><span class="toc-text">一、逻辑谬误概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%BB%E8%BE%91%E8%B0%AC%E8%AF%AF"><span class="toc-text">1、什么是逻辑谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AC%A0%E7%BC%BA%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4"><span class="toc-text">2、我们为什么欠缺逻辑思维</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E8%B0%AC%E8%AF%AF%E5%BD%A2%E5%BC%8F"><span class="toc-text">二、常见的谬误形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%AD%A7%E4%B9%89%E8%B0%AC%E8%AF%AF"><span class="toc-text">1、歧义谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%BA%9F%E8%AF%9D%E8%B0%AC%E8%AF%AF"><span class="toc-text">2、废话谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%AD%AA%E6%9B%B2%E8%AE%BA%E9%A2%98%E8%B0%AC%E8%AF%AF"><span class="toc-text">3、歪曲论题谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%B5%B7%E6%BA%90%E8%B0%AC%E8%AF%AF"><span class="toc-text">4、起源谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%AF%89%E8%AF%B8%E4%BA%BA%E8%BA%AB"><span class="toc-text">5、诉诸人身</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%AF%89%E8%AF%B8%E6%83%85%E6%84%9F"><span class="toc-text">6、诉诸情感</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E4%BB%A5%E5%81%8F%E6%A6%82%E5%85%A8"><span class="toc-text">7、以偏概全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E5%9B%A0%E6%9E%9C%E8%B0%AC%E8%AF%AF"><span class="toc-text">8、因果谬误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E4%B8%8D%E5%BD%93%E9%A2%84%E8%AE%BE%E8%B0%AC%E8%AF%AF"><span class="toc-text">9、不当预设谬误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%8A%AF%E9%80%BB%E8%BE%91%E8%B0%AC%E8%AF%AF"><span class="toc-text">三、如何避免犯逻辑谬误</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BB%93%E6%9D%9F%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%8F%A3%E6%B0%B4%E6%88%98"><span class="toc-text">1、结束无意义的口水战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%BB%BA%E7%AB%8B%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4"><span class="toc-text">2、建立批判性思维</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BB%93%E8%AF%AD"><span class="toc-text">四、结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/3040192682/" title="从国产浏览器到Tor Browser——该如何选择、配置及使用？"><img src="https://lh3.googleusercontent.com/u/0/d/1wywEilqqUX9fYLu_RGZMF89IpK1Wzgal" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从国产浏览器到Tor Browser——该如何选择、配置及使用？"/></a><div class="content"><a class="title" href="/2022/07/3040192682/" title="从国产浏览器到Tor Browser——该如何选择、配置及使用？">从国产浏览器到Tor Browser——该如何选择、配置及使用？</a><time datetime="2022-07-04T07:00:00.000Z" title="发表于 2022-07-04 00:00:00">2022-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/280636687/" title="每月热点回顾（2022年6月）"><img src="https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每月热点回顾（2022年6月）"/></a><div class="content"><a class="title" href="/2022/06/280636687/" title="每月热点回顾（2022年6月）">每月热点回顾（2022年6月）</a><time datetime="2022-06-29T07:00:00.000Z" title="发表于 2022-06-29 00:00:00">2022-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/2508436128/" title="图文扫盲“国家”、“政府”和“公民”的关系——兼谈美国的三权分立"><img src="https://lh3.googleusercontent.com/u/0/d/1MlAEARO5ZQ9JuzbeJyJ20LDWZ1nkWUUf" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图文扫盲“国家”、“政府”和“公民”的关系——兼谈美国的三权分立"/></a><div class="content"><a class="title" href="/2022/06/2508436128/" title="图文扫盲“国家”、“政府”和“公民”的关系——兼谈美国的三权分立">图文扫盲“国家”、“政府”和“公民”的关系——兼谈美国的三权分立</a><time datetime="2022-06-28T07:00:00.000Z" title="发表于 2022-06-28 00:00:00">2022-06-28</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://lh3.googleusercontent.com/u/0/d/1BCJCE_W9RWymWlxIzC6OCcwInGTg0xEI')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 拾风记</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div></div></body></html>
