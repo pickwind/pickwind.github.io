@@ -1,5 +1,6 @@
 http://pickwind.github.io/video/index.html
 http://pickwind.github.io/music/index.html
+http://pickwind.github.io/recommend/index.html
 http://pickwind.github.io/2022/07/320507338/
 http://pickwind.github.io/categories/index.html
 http://pickwind.github.io/tags/index.html
