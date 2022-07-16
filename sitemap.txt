@@ -6,7 +6,7 @@ http://pickwind.github.io/tags/index.html
 http://pickwind.github.io/books/index.html
 http://pickwind.github.io/link/index.html
 http://pickwind.github.io/software/index.html
-http://pickwind.github.io/about/index.html
+http://pickwind.github.io/messages/index.html
 http://pickwind.github.io/2022/07/3040192682/
 http://pickwind.github.io/2022/06/280636687/
 http://pickwind.github.io/2022/06/2508436128/
